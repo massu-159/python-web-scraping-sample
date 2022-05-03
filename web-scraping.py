@@ -12,7 +12,7 @@ data_samples = []
 #スクレイピングするページ数
 max_page=5
 #SUUMOを東京都23区のみ指定して検索して出力した画面url(ページ数フォーマットが必要)
-url='https://suumo.jp/jj/chintai/ichiran/FR301FC001/?ar=030&bs=040&ta=13&sc=13101&sc=13102&sc=13103&sc=13104&sc=13105&sc=13113&sc=13106&sc=13107&sc=13108&sc=13118&sc=13121&sc=13122&sc=13123&sc=13109&sc=13110&sc=13111&sc=13112&sc=13114&sc=13115&sc=13120&sc=13116&sc=13117&sc=13119&cb=0.0&ct=8.0&et=10&md=02&ts=1&ts=2&cn=0&mb=0&mt=9999999&tc=0400101&tc=0400501&tc=0400502&tc=0400301&shkr1=03&shkr2=03&shkr3=03&shkr4=03&fw2=&srch_navi=1'
+url='<URL>'
 
 #リクエストがうまく行かないパターンを回避するためのやり直し
 @retry(tries=3, delay=10, backoff=2)
@@ -110,7 +110,7 @@ for page in range(1,max_page+1):
 
 
     #CSV書き出し
-    with open('FILE', 'w') as f:
+    with open('<FILE>', 'w') as f:
         writer = csv.writer(f)
         writer.writerows(data_samples)
 
